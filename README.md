@@ -19,12 +19,15 @@ React Hooks 的教學筆記網站，每個 Hook 一頁，附可互動的範例�
 
 ```bash
 npm install
-npm start          # http://localhost:3000/react-hook-notes
-npm run build
+npm run dev        # http://localhost:3000/react-hook-notes/
+npm run lint
+npm run build      # 輸出到 dist/
 ```
 
-部署:push 到 `main` 後由 GitHub Action([.github/workflows/autoAction.yml](.github/workflows/autoAction.yml))build 並推到 `gh-pages` 分支;PR 只跑 build 當檢查。
+部署:push 到 `main` 後由 GitHub Action([.github/workflows/autoAction.yml](.github/workflows/autoAction.yml))build 並把 `dist/` 推到 `gh-pages` 分支;PR 只跑 build 當檢查。
 
-路由的 `basename` 取自 `package.json` 的 `homepage`;repo 改名時只要改 `homepage`。
+路由的 `basename` 取自 `vite.config.ts` 的 `base`;repo 改名時只要改 `base`。
 
-技術:Create React App、React 18、React Router、TypeScript、SCSS。
+需要 Node.js 20.19 以上。
+
+技術:Vite、React 19、React Router、TypeScript、SCSS。

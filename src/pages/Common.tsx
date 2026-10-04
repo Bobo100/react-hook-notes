@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { Prism } from "react-syntax-highlighter"
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 export const CommonPrism = ({ children, limit_height }: { children: string, limit_height?: string }) => {
 
     const textInput = useRef<HTMLDivElement>(null)
