@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router basename="/React-Hook">
+      <Router basename={process.env.PUBLIC_URL}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
